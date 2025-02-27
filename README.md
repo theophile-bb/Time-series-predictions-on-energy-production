@@ -1,7 +1,7 @@
 # Time series predictions on energy production
 
 This project focuses on comparing the performances of many time series models in order to predict future values.
-In a context of climate and energy crisis, the goal was to try and forecast the energy production values for the 5 to 10 coming years to have a glimpse on the evolution of these energies.
+In a context of climate and energy crisis, the goal was to try and forecast the energy production values for the 5 to 10 coming years to have a glimpse of the evolution of these energies.
 
 ![image](https://github.com/user-attachments/assets/fa61bfb7-77e7-4400-9fd1-ec19291ee48d)
 
