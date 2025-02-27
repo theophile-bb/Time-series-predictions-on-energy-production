@@ -24,4 +24,20 @@ The dataset is very complete, especially regarding the long running energies suc
 It contains a lot of observations related to the energy production and consumption in different countries and different years.
 
 ## Methodology
+For this project I worked with oil, gas and coal production data for 2 reasons :
+1. These are the most used energy sources globally...
+2. ... there are therefore more observations available for the study.
 
+The project compiles many time series forecasting models. The models introduced are :
+
+• ARIMA
+
+• ARIMAX
+
+• Prophet (Facebook)
+
+• LSTM
+
+• Chronos (Amazon)
+
+Each model has a dedicated section in the notebook with the functionnal code and explainations on how it works.
