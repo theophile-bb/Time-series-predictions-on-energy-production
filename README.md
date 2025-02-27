@@ -30,14 +30,22 @@ For this project I worked with oil, gas and coal production data for 2 reasons :
 
 The project compiles many time series forecasting models. The models introduced are :
 
-• ARIMA
-
-• ARIMAX
-
-• Prophet (Facebook)
-
-• LSTM
-
-• Chronos (Amazon)
+- ARIMA
+- ARIMAX
+- Prophet (Facebook)
+- LSTM
+- Chronos (Amazon)
 
 Each model has a dedicated section in the notebook with the functionnal code and explainations on how it works.
+
+## How to use the Webapp ?
+
+1. **Select a Country** from the dropdown list.
+2. **Choose an Energy Type** (Oil, Gas, or Coal).
+3. **Set the Sequence Length** (how many past years to consider for prediction).
+4. **Select Future Steps** (how many years ahead to predict).
+5. Click **"Generate Forecast"** to view predictions and a graph of historical + forecasted values.
+
+📊 The output includes:
+- A **list of predicted values** for the selected future years.
+- A **graph** displaying both historical data and future predictions.
