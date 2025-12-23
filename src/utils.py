@@ -391,7 +391,7 @@ def plot_graph(df,title, cols=['coal_production', 'oil_production', 'gas_product
   plt.tight_layout()
   plt.show()
 
-  def plot_forecasts(data_plot, forecast_plot):
+def plot_forecasts(data_plot, forecast_plot):
     plt.figure(figsize=(15, 7))
 
     sns.lineplot(
@@ -424,3 +424,4 @@ def plot_graph(df,title, cols=['coal_production', 'oil_production', 'gas_product
 def relu(x):
 
   return np.maximum(0, x)
+
