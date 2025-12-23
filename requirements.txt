@@ -1,0 +1,16 @@
+# Core ML / Time Series
+pmdarima
+statsmodels
+prophet
+
+# AutoML
+autogluon
+
+# PyTorch ecosystem
+torch==2.9.0
+torchvision==0.24.0
+torchaudio==2.9.0
+
+# NLP / Transformers
+transformers>=4.41,<5.0
+sentence-transformers
