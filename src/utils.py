@@ -28,6 +28,7 @@ from statsmodels.tsa.stattools import adfuller
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.tsa.statespace.sarimax import SARIMAX
+import pmdarima as pm
 
 # =========================
 # Machine Learning
@@ -36,6 +37,22 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import PolynomialFeatures, MinMaxScaler
 from sklearn.pipeline import make_pipeline
+
+# =========================
+# Prophet
+# =========================
+from prophet import Prophet
+
+# =========================
+# Deep Learning (LSTM)
+# =========================
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense
+
+# =========================
+# AutoML / Chronos
+# =========================
+from autogluon.timeseries import TimeSeriesPredictor, TimeSeriesDataFrame
 
 
 #--------------------- processing ------------------------
@@ -405,4 +422,5 @@ def plot_graph(df,title, cols=['coal_production', 'oil_production', 'gas_product
 #--------------------- other ------------------------
 
 def relu(x):
+
   return np.maximum(0, x)
