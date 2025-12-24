@@ -311,7 +311,7 @@ def fit_LSTM(train, test, seq_len, horizon):
   model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_test, y_test))
   return model
 
-def flatten_prediction(scaled_data, seq_len):
+def flatten_prediction(scaled_data, seq_len, model, scaler):
   input_sequence = scaled_data[-seq_len:, 0] # Shape (seq_length,)
   input_sequence = input_sequence.reshape(1, seq_len, 1)
 
@@ -424,6 +424,7 @@ def plot_forecasts(data_plot, forecast_plot, col):
 def relu(x):
 
   return np.maximum(0, x)
+
 
 
 
