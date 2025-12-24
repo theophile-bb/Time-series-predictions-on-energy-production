@@ -1,0 +1,50 @@
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ======================
+# Jupyter / Colab
+# ======================
+.ipynb_checkpoints/
+*.log
+
+# ======================
+# Virtual environments
+# ======================
+.env
+.venv
+env/
+venv/
+
+# ======================
+# OS files
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# Data (large / generated)
+# ======================
+data/*
+!data/energy_sample.json
+
+data/processed/
+data/external/
+
+# ======================
+# ML artifacts
+# ======================
+checkpoints/
+models/
+runs/
+wandb/
+
+# ======================
+# IDEs
+# ======================
+.vscode/
+.idea/
