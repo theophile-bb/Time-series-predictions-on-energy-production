@@ -299,10 +299,10 @@ def format_X_Y(train_data, test_data, seq_length, horizon):
 
 def fit_LSTM(train, test, seq_len, horizon):
 
-  X_train, X_test, y_train, y_test = format_X_Y(train, test, seq_length, horizon)
+  X_train, X_test, y_train, y_test = format_X_Y(train, test, seq_len, horizon)
 
   model = Sequential([
-      LSTM(50, activation='relu', input_shape=(seq_length, 1)),
+      LSTM(50, activation='relu', input_shape=(seq_len, 1)),
       Dense(horizon)
   ])
 
@@ -424,5 +424,6 @@ def plot_forecasts(data_plot, forecast_plot, col):
 def relu(x):
 
   return np.maximum(0, x)
+
 
 
