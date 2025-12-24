@@ -58,7 +58,7 @@ from autogluon.timeseries import TimeSeriesPredictor, TimeSeriesDataFrame
 #--------------------- processing ------------------------
 
 def load_json(path):
-  with open(path + "owid-energy-data.json", 'r', encoding='utf-8') as f:
+  with open(path, 'r', encoding='utf-8') as f:
     data = json.load(f)
   return data
 
@@ -424,6 +424,7 @@ def plot_forecasts(data_plot, forecast_plot, col):
 def relu(x):
 
   return np.maximum(0, x)
+
 
 
 
