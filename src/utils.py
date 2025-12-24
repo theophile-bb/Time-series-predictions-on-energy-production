@@ -411,7 +411,7 @@ def plot_forecasts(data_plot, forecast_plot, col):
     )
 
     plt.legend()
-    plt.title('ARIMAX Model Forecast')
+    plt.title('Model Forecast')
     plt.xticks(rotation=90, ha='right')
     plt.xlabel('Years', fontsize=12)
     plt.ylabel('Production', fontsize=12)
@@ -424,6 +424,7 @@ def plot_forecasts(data_plot, forecast_plot, col):
 def relu(x):
 
   return np.maximum(0, x)
+
 
 
 
