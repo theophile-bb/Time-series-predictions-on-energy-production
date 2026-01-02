@@ -364,7 +364,7 @@ def predict_Chronos(model, data):
 
 
 #--------------------- Graph plotting ------------------------
-
+"""
 def plot_acf(diff_col):
   fig = plt.figure(figsize=(12,8))
   ax1 = fig.add_subplot(211)
@@ -419,11 +419,81 @@ def plot_forecasts(data_plot, forecast_plot, col):
     plt.tight_layout()
     plt.show()
     return None
+    """
+
+def plot_acf(diff_col):
+    fig, ax = plt.subplots(figsize=(12, 8))
+    sm.graphics.tsa.plot_acf(
+        diff_col.iloc[13:], lags=40, ax=ax
+    )
+    return fig
+def plot_pacf(diff_col):
+    fig, ax = plt.subplots(figsize=(12, 8))
+    sm.graphics.tsa.plot_pacf(
+        diff_col.iloc[13:], lags=40, ax=ax
+    )
+    return fig
+
+def plot_graph(df,title,cols=['coal_production', 'oil_production', 'gas_production']):
+    fig, ax = plt.subplots(figsize=(15, 7))
+
+    for col in cols:
+        if col in df.columns:
+            sns.lineplot(
+                data=df,
+                x='year',
+                y=col,
+                marker='o',
+                label=col.capitalize(),
+                ax=ax
+            )
+
+    ax.set_title(title, fontsize=16)
+    ax.set_xlabel('Years', fontsize=12)
+    ax.set_ylabel('Productions', fontsize=12)
+    ax.tick_params(axis='x', rotation=90)
+    ax.grid(True, linestyle='--', alpha=0.6)
+
+    fig.tight_layout()
+    return fig
+
+def plot_forecasts(data_plot, forecast_plot, col):
+    fig, ax = plt.subplots(figsize=(15, 7))
+
+    sns.lineplot(
+        data=data_plot,
+        x='time',
+        y='value',
+        marker='o',
+        label=col.capitalize(),
+        ax=ax
+    )
+
+    sns.lineplot(
+        data=forecast_plot,
+        x='time',
+        y='forecast',
+        marker='o',
+        label=f'{col.capitalize()} Forecast',
+        ax=ax
+    )
+
+    ax.set_title('Model Forecast')
+    ax.set_xlabel('Years', fontsize=12)
+    ax.set_ylabel('Production', fontsize=12)
+    ax.tick_params(axis='x', rotation=90)
+    ax.legend()
+    ax.grid(True, linestyle='--', alpha=0.6)
+
+    fig.tight_layout()
+    return fig
+
 #--------------------- other ------------------------
 
 def relu(x):
 
   return np.maximum(0, x)
+
 
 
 
