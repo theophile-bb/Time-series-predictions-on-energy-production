@@ -4,6 +4,7 @@
 # =========================
 import json
 from datetime import datetime, timedelta
+import os
 
 # =========================
 # Third-party libraries
@@ -457,7 +458,7 @@ def plot_graph(df,title,cols=['coal_production', 'oil_production', 'gas_producti
     fig.tight_layout()
     return fig
 
-def plot_forecasts(data_plot, forecast_plot, col):
+def plot_forecasts(data_plot, forecast_plot, col, model_name):
     fig, ax = plt.subplots(figsize=(15, 7))
 
     sns.lineplot(
@@ -478,7 +479,7 @@ def plot_forecasts(data_plot, forecast_plot, col):
         ax=ax
     )
 
-    ax.set_title('Model Forecast')
+    ax.set_title(f'{model_name} Model Forecast')
     ax.set_xlabel('Years', fontsize=12)
     ax.set_ylabel('Production', fontsize=12)
     ax.tick_params(axis='x', rotation=90)
@@ -494,7 +495,20 @@ def relu(x):
 
   return np.maximum(0, x)
 
+#--------------------- Save Images ------------------------
 
+def save_figs(figs, folder="plots"):
+    os.makedirs(folder, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    for i, fig in enumerate(figs, 1):
+        fig.savefig(
+            f"{folder}/plot_{i}_{timestamp}.png",
+            dpi=300,
+            bbox_inches="tight"
+        )
+
+    print(f"✅ Saved {len(figs)} figures to {folder}/")
 
 
 
