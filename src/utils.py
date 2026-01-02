@@ -365,62 +365,6 @@ def predict_Chronos(model, data):
 
 
 #--------------------- Graph plotting ------------------------
-"""
-def plot_acf(diff_col):
-  fig = plt.figure(figsize=(12,8))
-  ax1 = fig.add_subplot(211)
-  fig = sm.graphics.tsa.plot_acf(diff_col.iloc[13:],lags=40,ax=ax1)
-  return None
-
-def plot_pacf(diff_col):
-  fig = plt.figure(figsize=(12,8))
-  ax1 = fig.add_subplot(211)
-  fig = sm.graphics.tsa.plot_pacf(diff_col.iloc[13:],lags=40,ax=ax1)
-  return None
-
-def plot_graph(df,title, cols=['coal_production', 'oil_production', 'gas_production']):
-  plt.figure(figsize=(15, 7))
-  for col in cols:
-    if col in df.columns:
-      sns.lineplot(data=df, x='year', y=col, marker='o', label=col.capitalize())
-
-  plt.title(title, fontsize=16)
-  plt.xlabel('Years', fontsize=12)
-  plt.ylabel('Productions', fontsize=12)
-  plt.xticks(rotation=90, ha='right')
-  plt.grid(True, linestyle='--', alpha=0.6)
-  plt.tight_layout()
-  plt.show()
-
-def plot_forecasts(data_plot, forecast_plot, col):
-    plt.figure(figsize=(15, 7))
-
-    sns.lineplot(
-        data=data_plot,
-        x='time',
-        y='value',
-        marker='o',
-        label=col.capitalize()
-    )
-
-    sns.lineplot(
-        data=forecast_plot,
-        x='time',
-        y='forecast',
-        marker='o',
-        label=f'{col.capitalize()} Forecast'
-    )
-
-    plt.legend()
-    plt.title('Model Forecast')
-    plt.xticks(rotation=90, ha='right')
-    plt.xlabel('Years', fontsize=12)
-    plt.ylabel('Production', fontsize=12)
-    plt.grid(True, linestyle='--', alpha=0.6)
-    plt.tight_layout()
-    plt.show()
-    return None
-    """
 
 def plot_acf(diff_col):
     fig, ax = plt.subplots(figsize=(12, 8))
@@ -509,6 +453,7 @@ def save_figs(figs, folder="plots"):
         )
 
     print(f"✅ Saved {len(figs)} figures to {folder}/")
+
 
 
 
