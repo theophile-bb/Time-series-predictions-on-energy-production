@@ -1,51 +1,112 @@
-# Time series predictions on energy production
+# Time Series Predictions on Energy Production
 
-This project focuses on comparing the performances of many time series models in order to predict future values.
-In a context of climate and energy crisis, the goal was to try and forecast the energy production values for the 5 to 10 coming years to have a glimpse of the evolution of these energies.
+[![Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=googlecolab)](https://colab.research.google.com/github/theophile-bb/Time-series-predictions-on-energy-production/blob/main/notebooks/energy_forecasting.ipynb)
+
+Time Series Forecasting models and experiments to predict energy production over time. This project explores multiple modeling approaches including ARIMA, Prophet, LSTM, and AutoML time series predictor (Chronos), organized into reusable code and structured notebooks for reproducibility.
 
 ![image](https://github.com/user-attachments/assets/fa61bfb7-77e7-4400-9fd1-ec19291ee48d)
 
-The project is divided into 2 parts :
+---
 
-• Comparison of various time series forecast models to test their efficiency.
+##  Project Structure
 
-• Web Application: a gradio webapp designed as a tool and using a LSTM neural network to predict the energy poduction values in the chsosen number of years (in TWh) .
+Time-series-predictions-on-energy-production/ <br>
+├── data/ <br>
+│ ├── raw_sample.csv # Small sample dataset <br>
+├── src/ <br>
+│ ├── init.py <br>
+│ └── utils.py # Reusable functions for data & model <br>
+├── plots/ # Saved visualizations <br>
+├── energy_forecasting.ipynb # Main analysis notebook <br>
+├── requirements.txt <br>
+├── .gitignore <br>
+└── README.md <br>
 
-## Repository Structure
-• *Energy production forecast.ipynb*: Comparison of popular time series models with descriptions about their specificities.
+---
 
-• *Energy forecast webapp.ipynb*: Gradio webapp to predict 1 to 10 future obervations with a LSTM and based on a 1-step-ahed forecast method.
-(Input : select a country, select an energy type, sequence length, number of obervations to forecast. Output : list of values, plot of the observations)
+## 📋 Prerequisites
 
-## Dataset
+This project requires:
+
+- Python 3.10+
+- A working Python environment (venv, conda, etc.)
+
+---
+
+## ⚙️ Installation
+
+Clone the repository and install dependencies:
+
+```
+$ git clone https://github.com/theophile-bb/Time-series-predictions-on-energy-production.git
+$ cd Time-series-predictions-on-energy-production
+$ pip install -r requirements.txt
+```
+
+
+## Getting the data
+
 Dataset : https://github.com/owid/energy-data?tab=readme-ov-file
 
-The dataset is very complete, especially regarding the long running energies such as oil, gas or coal.
-It contains a lot of observations related to the energy production and consumption in different countries and different years.
+The dataset is very complete, especially regarding the long running energies such as oil, gas or coal. It contains a lot of observations related to the energy production and consumption in different countries and different years.
+The repository contains a small sample dataset for quick testing.
 
-## Methodology
-For this project I worked with oil, gas and coal production data for 2 reasons :
-1. These are the most used energy sources globally...
-2. ... there are therefore more observations available for the study.
+For larger datasets:
 
-The project compiles many time series forecasting models. The models introduced are :
+Place your data in data/
 
-- ARIMA
-- ARIMAX
-- Prophet (Facebook)
-- LSTM
-- Chronos (Amazon)
+Use functions in src/utils.py to load and process it
 
-Each model has a dedicated section in the notebook with the functionnal code and explainations on how it works.
 
-## How to use the Webapp ?
+## Notebook
 
-1. **Select a Country** from the dropdown list.
-2. **Choose an Energy Type** (Oil, Gas, or Coal).
-3. **Set the Sequence Length** (how many past years to consider for prediction).
-4. **Select Future Steps** (how many years ahead to predict).
-5. Click **"Generate Forecast"** to view predictions and a graph of historical + forecasted values.
+The main analysis is in: energy_forecasting.ipynb
 
-📊 The output includes:
-- A **list of predicted values** for the selected future years.
-- A **graph** displaying both historical data and future predictions.
+
+It includes:
+
+- Data loading & cleaning
+
+- Preprocessing & Exploratory analysis
+
+- Model training and evaluation
+
+  - ARIMA / SARIMAX
+
+  - Prophet
+
+  - LSTM
+
+  - Chronos / AutoML
+
+- Forecast visualizations
+
+- Performance comparison
+
+
+
+## Visualizations
+
+Example of visualizations made :
+
+*Evolution of the 3 main energy production means over the years*
+![Evolution of the 3 main energy production means over the years](plot_1_20260102_171323.png)
+
+*ARIMAX*
+![ARIMAX](plots/plot_6_20260102_171323.png)
+
+*Prophet*
+![Prophet](plots/plot_7_20260102_171323.png)
+
+*LSTM*
+![LSTM](plots/plot_8_20260102_171323.png)
+
+*Chronos*
+![Chronos](plots/plot_10_20260102_171323.png)
+
+
+
+
+
+
+
