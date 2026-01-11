@@ -90,7 +90,7 @@ It includes:
 Example of visualizations made :
 
 *Evolution of the 3 main energy production means over the years*
-![Evolution of the 3 main energy production means over the years](plot_1_20260102_171323.png)
+![AllProductions](plot_1_20260102_171323.png)
 
 *ARIMAX*
 ![ARIMAX](plots/plot_6_20260102_171323.png)
