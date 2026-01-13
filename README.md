@@ -43,6 +43,7 @@ $ cd Time-series-predictions-on-energy-production
 $ pip install -r requirements.txt
 ```
 
+---
 
 ## Getting the data
 
@@ -59,6 +60,7 @@ Place your data in data/
 
 Use functions in src/utils.py to load and process it
 
+---
 
 ## Notebook
 
@@ -85,7 +87,7 @@ It includes:
 
 - Performance comparison
 
-
+---
 
 ## Visualizations
 
