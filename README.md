@@ -17,9 +17,9 @@ Time-series-predictions-on-energy-production/ <br>
 │ ├── raw_sample.csv # Small sample dataset <br>
 ├── src/ <br>
 │ ├── init.py <br>
-│ └── utils.py # Reusable functions for data & model <br>
+│ └── utils.py <br>
 ├── plots/ # Saved visualizations <br>
-├── energy_forecasting.ipynb # Main analysis notebook <br>
+├── energy_forecasting.ipynb <br>
 ├── requirements.txt <br>
 ├── .gitignore <br>
 └── README.md <br>
