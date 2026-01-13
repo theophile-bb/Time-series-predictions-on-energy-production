@@ -1,6 +1,8 @@
 # Time Series Predictions on Energy Production
 
 [![Colab](https://img.shields.io/badge/Open%20in-Colab-blue?logo=googlecolab)](https://colab.research.google.com/github/theophile-bb/Time-series-predictions-on-energy-production/blob/main/notebooks/energy_forecasting.ipynb)
+[![Website](https://img.shields.io/badge/Website-GitHub%20Pages-blue?logo=github)]([https://github.com/USERNAME/REPO](https://github.com/owid/energy-data?tab=readme-ov-file))
+
 
 Time Series Forecasting models and experiments to predict energy production over time. This project explores multiple modeling approaches including ARIMA, Prophet, LSTM, and AutoML time series predictor (Chronos), organized into reusable code and structured notebooks for reproducibility.
 
@@ -46,8 +48,6 @@ $ pip install -r requirements.txt
 ---
 
 ## Getting the data
-
-[![Website](https://img.shields.io/badge/Website-GitHub%20Pages-blue?logo=github)]([https://github.com/USERNAME/REPO](https://github.com/owid/energy-data?tab=readme-ov-file))
 
 Dataset : https://github.com/owid/energy-data?tab=readme-ov-file
 
