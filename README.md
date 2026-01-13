@@ -18,7 +18,7 @@ Time-series-predictions-on-energy-production/ <br>
 ├── src/ <br>
 │ ├── init.py <br>
 │ └── utils.py <br>
-├── plots/ # Saved visualizations <br>
+├── plots/ <br>
 ├── energy_forecasting.ipynb <br>
 ├── requirements.txt <br>
 ├── .gitignore <br>
