@@ -46,6 +46,8 @@ $ pip install -r requirements.txt
 
 ## Getting the data
 
+[![Website](https://img.shields.io/badge/Website-GitHub%20Pages-blue?logo=github)]([https://github.com/USERNAME/REPO](https://github.com/owid/energy-data?tab=readme-ov-file))
+
 Dataset : https://github.com/owid/energy-data?tab=readme-ov-file
 
 The dataset is very complete, especially regarding the long running energies such as oil, gas or coal. It contains a lot of observations related to the energy production and consumption in different countries and different years.
