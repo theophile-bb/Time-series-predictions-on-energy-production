@@ -238,12 +238,12 @@ def predict_Chronos(model: TimeSeriesPredictor, data: TimeSeriesDataFrame) -> pd
     return model.predict(data)
 
 
-def plot_acf_custom(diff_col: pd.Series) -> plt.Figure: # Renommé pour éviter conflit avec import
+def plot_acf(diff_col: pd.Series) -> plt.Figure:
     fig, ax = plt.subplots(figsize=(12, 8))
     sm.graphics.tsa.plot_acf(diff_col.iloc[13:], lags=40, ax=ax)
     return fig
 
-def plot_pacf_custom(diff_col: pd.Series) -> plt.Figure: # Renommé pour éviter conflit avec import
+def plot_pacf(diff_col: pd.Series) -> plt.Figure:
     fig, ax = plt.subplots(figsize=(12, 8))
     sm.graphics.tsa.plot_pacf(diff_col.iloc[13:], lags=40, ax=ax)
     return fig
@@ -285,3 +285,4 @@ def save_figs(figs: List[plt.Figure], folder: str = "plots") -> None:
     for i, fig in enumerate(figs, 1):
         fig.savefig(f"{folder}/plot_{i}_{timestamp}.png", dpi=300, bbox_inches="tight")
     print(f"✅ Saved {len(figs)} figures to {folder}/")
+
