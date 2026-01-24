@@ -16,6 +16,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures, MinMaxScaler
 from sklearn.pipeline import make_pipeline, Pipeline
 from prophet import Prophet
+from tensorflow.keras.layers import LSTM, Dense 
 from tensorflow.keras.models import Sequential
 from autogluon.timeseries import TimeSeriesPredictor, TimeSeriesDataFrame
 
@@ -285,4 +286,5 @@ def save_figs(figs: List[plt.Figure], folder: str = "plots") -> None:
     for i, fig in enumerate(figs, 1):
         fig.savefig(f"{folder}/plot_{i}_{timestamp}.png", dpi=300, bbox_inches="tight")
     print(f"✅ Saved {len(figs)} figures to {folder}/")
+
 
