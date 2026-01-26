@@ -12,17 +12,21 @@ Time Series Forecasting models and experiments to predict energy production over
 
 ##  Project Structure
 
-Time-series-predictions-on-energy-production/ <br>
-├── data/ <br>
-│ ├── raw_sample.csv # Small sample dataset <br>
-├── src/ <br>
-│ ├── init.py <br>
-│ └── utils.py <br>
-├── plots/ <br>
-├── energy_forecasting.ipynb <br>
-├── requirements.txt <br>
-├── .gitignore <br>
-└── README.md <br>
+Time-series-predictions-on-energy-production/<br>
+├── 📂 data/<br>
+│   └── raw_sample.csv   <br>
+│<br>
+├── 📂 src/<br>
+│   ├── __init__.py<br>
+│   └── utils.py<br>
+│<br>
+├── 📂 plots/<br>
+│<br>
+├── energy_forecasting.ipynb<br>
+├── requirements.txt<br>
+├── .gitignore<br>
+└── README.md<br>
+
 
 ---
 
