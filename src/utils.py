@@ -280,11 +280,20 @@ def plot_forecasts(data_plot: pd.DataFrame, forecast_plot: pd.DataFrame, col: st
 def relu(x: np.ndarray) -> np.ndarray:
     return np.maximum(0, x)
 
+
+def save_figure_png(folder: str, title: str) -> None:
+  title = title.replace(' ','_')
+  img_path = os.path.join(folder, f"{title}.png")
+  plt.savefig(img_path, dpi=300, bbox_inches='tight')
+  return None
+
+
 def save_figs(figs: List[plt.Figure], folder: str = "plots") -> None:
     os.makedirs(folder, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     for i, fig in enumerate(figs, 1):
         fig.savefig(f"{folder}/plot_{i}_{timestamp}.png", dpi=300, bbox_inches="tight")
     print(f"✅ Saved {len(figs)} figures to {folder}/")
+
 
 
