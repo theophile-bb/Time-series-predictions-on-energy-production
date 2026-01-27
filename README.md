@@ -98,19 +98,19 @@ It includes:
 Example of visualizations made :
 
 *Evolution of the 3 main energy production means over the years*
-![AllProductions](plots/plot_1_20260102_171323.png)
+![AllProductions](plots/Production_over_time.png)
 
 *ARIMAX*
-![ARIMAX](plots/plot_6_20260102_171323.png)
+![ARIMAX](plots/ARIMAX_Model_Forecast.png)
 
 *Prophet*
-![Prophet](plots/plot_7_20260102_171323.png)
+![Prophet](plots/Prophet_Model_Forecast.png)
 
 *LSTM*
-![LSTM](plots/plot_8_20260102_171323.png)
+![LSTM](plots/LSTM_Model_Forecast.png)
 
 *Chronos*
-![Chronos](plots/plot_10_20260102_171323.png)
+![Chronos](plots/Chronos_Model_Forecast.png)
 
 
 
