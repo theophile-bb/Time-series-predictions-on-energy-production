@@ -262,11 +262,11 @@ def plot_graph(df: pd.DataFrame, title: str, cols: List[str] = ['coal_production
     fig.tight_layout()
     return fig
 
-def plot_forecasts(data_plot: pd.DataFrame, forecast_plot: pd.DataFrame, col: str, model_name: str) -> plt.Figure:
+def plot_forecasts(data_plot: pd.DataFrame, forecast_plot: pd.DataFrame, col: str, title: str) -> plt.Figure:
     fig, ax = plt.subplots(figsize=(15, 7))
     sns.lineplot(data=data_plot, x='time', y='value', marker='o', label=col.capitalize(), ax=ax)
     sns.lineplot(data=forecast_plot, x='time', y='forecast', marker='o', label=f'{col.capitalize()} Forecast', ax=ax)
-    ax.set_title(f'{model_name} Model Forecast')
+    ax.set_title(title)
     ax.set_xlabel('Years', fontsize=12)
     ax.set_ylabel('Production', fontsize=12)
     ax.tick_params(axis='x', rotation=90)
@@ -295,6 +295,7 @@ def save_figs(figs: List[plt.Figure], folder: str = "plots") -> None:
     for i, fig in enumerate(figs, 1):
         fig.savefig(f"{folder}/plot_{i}_{timestamp}.png", dpi=300, bbox_inches="tight")
     print(f"✅ Saved {len(figs)} figures to {folder}/")
+
 
 
 
