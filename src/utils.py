@@ -281,11 +281,12 @@ def relu(x: np.ndarray) -> np.ndarray:
     return np.maximum(0, x)
 
 
-def save_figure_png(folder: str, title: str) -> None:
+def save_figure_png(fig, folder: str, title: str) -> None:
   title = title.replace(' ','_')
   img_path = os.path.join(folder, f"{title}.png")
-  plt.savefig(img_path, dpi=300, bbox_inches='tight')
+  fig.write_image(img_path, width=1200, height=700, scale=2)
   return None
+
 
 
 def save_figs(figs: List[plt.Figure], folder: str = "plots") -> None:
@@ -294,6 +295,7 @@ def save_figs(figs: List[plt.Figure], folder: str = "plots") -> None:
     for i, fig in enumerate(figs, 1):
         fig.savefig(f"{folder}/plot_{i}_{timestamp}.png", dpi=300, bbox_inches="tight")
     print(f"✅ Saved {len(figs)} figures to {folder}/")
+
 
 
 
